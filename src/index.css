@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+
+/* ==========================================
+   ELITE PORTFOLIO BACKGROUND SYSTEM
+   ========================================== */
+
+/* Aurora Blobs */
+/* ==========================================
+   LITE PORTFOLIO ANIMATIONS
+   ========================================== */
+
+/* Clean Fade Up Animation */
+.lite-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: clean-fade-up 0.8s ease-out forwards;
+}
+
+@keyframes clean-fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Very Slow, Subtle Background Drift */
+.animate-lite-drift-1 {
+  animation: drift1 25s ease-in-out infinite alternate;
+}
+
+.animate-lite-drift-2 {
+  animation: drift2 30s ease-in-out infinite alternate;
+}
+
+@keyframes drift1 {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-40px, 40px); }
+}
+
+@keyframes drift2 {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(30px, -30px); }
+}
+/* Clean Fade Down Animation for Navbar */
+.lite-fade-down {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: clean-fade-down 0.8s ease-out 0.2s forwards; /* 0.2s delay so it feels natural */
+}
+
+@keyframes clean-fade-down {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ==========================================
+   GLOBAL VISUAL OPTIMIZATION
+   ========================================== */
+
+/* 1. Premium System Font Stack (Loads instantly, looks like Inter/SF Pro) */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; /* Stops thin fonts from looking jagged */
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; /* Perfect kerning */
+}
+
+/* 2. Buttery Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 3. Custom Themed Scrollbar (Matches dark theme) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* 4. Themed Text Selection Highlight */
+::selection {
+  background: rgba(6, 182, 212, 0.3); /* Cyan tint */
+  color: #ffffff;
+}
+
+/* 5. Remove Mobile Tap Highlight (Makes buttons feel native) */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 6. Global Focus States (Accessibility + Theme match) */
+*:focus-visible {
+  outline: 1px solid rgba(6, 182, 212, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
