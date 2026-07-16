@@ -25,7 +25,7 @@ export default function About() {
 
   return (
     <div className="relative bg-[#050505] text-white min-h-screen overflow-hidden">
-      
+
       {/* Background Accents */}
       <div className="absolute top-1/3 -left-48 w-150 h-150 bg-violet-500/3 blur-[150px] rounded-full -z-10"></div>
       <div className="absolute bottom-1/3 -right-48 w-125 h-125 bg-cyan-500/3 blur-[150px] rounded-full -z-10"></div>
@@ -37,12 +37,12 @@ export default function About() {
           {/* Decorative Plus Signs */}
           <div className="absolute -top-8 -right-4 text-slate-800 text-4xl font-thin select-none hidden md:block">+</div>
           <div className="absolute top-10 -right-10 text-slate-800 text-2xl font-thin select-none hidden md:block">+</div>
-          
+
           <div className="flex items-center gap-4 mb-6">
             <div className="h-px w-12 bg-linear-to-r from-cyan-500 to-transparent"></div>
             <p className="text-cyan-400/80 text-xs font-medium tracking-[0.4em] uppercase">About Me</p>
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.9]">
             I build things for <br />
             <span className="text-slate-500">the modern web.</span>
@@ -51,7 +51,7 @@ export default function About() {
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24 mb-32">
-          
+
           {/* Left: Text Content (Takes up 3 cols) */}
           <div className="lg:col-span-3 space-y-8 lite-fade-up" style={{ animationDelay: '0.1s' }}>
             <p className="text-slate-400 text-lg leading-relaxed">
@@ -60,7 +60,7 @@ export default function About() {
             <p className="text-slate-500 text-base leading-relaxed">
               With a deep understanding of modern frontend architectures and robust backend systems, I ensure that every project is delivered with clean code, smooth 60fps animations, and a flawless UI.
             </p>
-            
+
             {/* Currently Building Status */}
             <div className="inline-flex items-center gap-3 px-5 py-3 mt-2 rounded-2xl border border-white/5 bg-white/2 backdrop-blur-sm group hover:border-white/10 transition-all duration-500">
               <div className="relative flex h-2 w-2">
@@ -72,7 +72,7 @@ export default function About() {
                 <span className="text-slate-200 font-medium">SaaS Dashboard</span>
               </div>
             </div>
-            
+
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-8 pt-10 border-t border-white/5">
               {[
@@ -93,10 +93,10 @@ export default function About() {
             <div className="relative w-full group">
               {/* Hover Glow Border */}
               <div className="absolute -inset-px bg-linear-0-to-b from-white/10 via-transparent to-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-              
+
               {/* Terminal Body */}
               <div className="relative bg-[#0a0a0a] rounded-2xl border border-white/10 overflow-hidden shadow-2xl shadow-black/50">
-                
+
                 {/* Terminal Header */}
                 <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-white/1">
                   <div className="flex gap-2">
@@ -123,7 +123,7 @@ export default function About() {
                     <p>{'};'}</p>
                   </div>
                   <div className="flex items-center mt-4 text-slate-500">
-                    <span className="text-cyan-400 mr-2">--------------</span> 
+                    <span className="text-cyan-400 mr-2">--------------</span>
                     <span className="animate-pulse">ready to code</span>
                   </div>
                 </div>
@@ -142,8 +142,8 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lite-fade-up" style={{ animationDelay: '0.4s' }}>
             {Object.entries(skills).map(([category, tools], index) => (
-              <div 
-                key={category} 
+              <div
+                key={category}
                 className={`group p-6 rounded-2xl border border-white/5 bg-white/1 hover:bg-white/3 transition-all duration-500 ${index === 0 ? 'md:col-span-2' : ''}`}
               >
                 <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-slate-600 mb-5 flex items-center gap-2">
@@ -152,8 +152,8 @@ export default function About() {
                 </h3>
                 <div className={`flex flex-wrap gap-3 ${index === 0 ? 'md:grid md:grid-cols-2' : ''}`}>
                   {tools.map((tool) => (
-                    <span 
-                      key={tool} 
+                    <span
+                      key={tool}
                       className="text-sm text-slate-500 font-medium hover:text-white transition-colors duration-300 cursor-default"
                     >
                       {tool}
@@ -175,13 +175,13 @@ export default function About() {
           <div className="relative lite-fade-up" style={{ animationDelay: '0.6s' }}>
             {/* Vertical Line */}
             <div className="absolute left-0 md:left-8 top-2 bottom-2 w-px bg-linear-0-to-b from-white/10 via-white/5 to-transparent"></div>
-            
+
             <div className="space-y-12">
               {process.map((item) => (
                 <div key={item.step} className="relative flex gap-8 group pl-8 md:pl-20">
                   {/* Timeline Node */}
                   <div className="absolute left-0 md:left-8 top-1 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-slate-800 border-4 border-[#050505] group-hover:bg-cyan-400 transition-colors duration-500 z-10"></div>
-                  
+
                   {/* Content */}
                   <div className="flex-1 pt-[-4px]">
                     <div className="flex items-center gap-4 mb-3">

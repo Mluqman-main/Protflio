@@ -9,30 +9,30 @@ export default function Projects() {
     <div className="relative bg-[#050505] text-white min-h-screen overflow-hidden">
 
       {/* Background Accents */}
-      <div className="absolute top-1/3 -left-48 w-125 h-125 bg-cyan-500/3 blur-[150px] rounded-full -z-10"></div>
-      <div className="absolute bottom-1/3 -right-48 w-100 h-100 bg-violet-500/3 blur-[150px] rounded-full -z-10"></div>
+      <div className="absolute top-1/3 -left-48 w-[45vw] h-[45vw] max-w-125 max-h-125 bg-cyan-500/3 blur-[100px] md:blur-[150px] rounded-full -z-10"></div>
+      <div className="absolute bottom-1/3 -right-48 w-[38vw] h-[38vw] max-w-100 max-h-100 bg-violet-500/3 blur-[100px] md:blur-[150px] rounded-full -z-10"></div>
 
-      <div className="max-w-7xl mx-auto px-6 py-32 md:py-40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28 md:py-40">
 
         {/* Header */}
-        <div className="relative mb-16 lite-fade-up">
+        <div className="relative mb-12 sm:mb-16 lite-fade-up">
 
-          <div className="absolute -top-8 -right-4 text-slate-800 text-4xl font-thin select-none hidden md:block">
+          <div className="absolute -top-8 -right-4 text-slate-800 text-4xl font-thin select-none hidden lg:block">
             +
           </div>
 
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-5 sm:mb-6">
             <div className="h-px w-12 bg-gradient-to-r from-cyan-500 to-transparent"></div>
 
-            <p className="text-cyan-400/80 text-xs font-medium tracking-[0.4em] uppercase">
+            <p className="text-cyan-400/80 text-xs font-medium tracking-[0.3em] sm:tracking-[0.4em] uppercase">
               Portfolio
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 sm:gap-8">
 
             <div>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.9] mb-2">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[0.95] sm:leading-[0.9] mb-2">
                 Selected <br />
                 <span className="text-slate-500">work.</span>
               </h1>
@@ -42,12 +42,12 @@ export default function Projects() {
               </p>
             </div>
 
-            <div className="flex items-center p-1 bg-white/5 rounded-full border border-white/5">
+            <div className="flex items-center gap-1 p-1 bg-white/5 rounded-full border border-white/5 overflow-x-auto max-w-full no-scrollbar">
               {filters.map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
-                  className={`px-5 py-2 text-xs font-medium tracking-wider rounded-full transition-all duration-300 ${activeFilter === filter
+                  className={`shrink-0 px-4 sm:px-5 py-2 text-xs font-medium tracking-wider rounded-full transition-all duration-300 ${activeFilter === filter
                     ? "bg-white text-black"
                     : "text-slate-500 hover:text-white"
                     }`}
@@ -74,7 +74,7 @@ export default function Projects() {
 
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-violet-500/10"></div>
 
-            <div className="relative p-10 flex flex-col justify-between h-full min-h-[560px]">
+            <div className="relative p-6 sm:p-8 md:p-10 flex flex-col justify-between h-full min-h-[420px] sm:min-h-[480px] md:min-h-[560px]">
 
               <div>
 
@@ -82,7 +82,7 @@ export default function Projects() {
                   Featured Project
                 </span>
 
-                <h2 className="mt-8 text-4xl md:text-6xl font-bold leading-tight">
+                <h2 className="mt-6 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   Banking
                   <br />
                   Management
@@ -92,7 +92,7 @@ export default function Projects() {
                   </span>
                 </h2>
 
-                <p className="mt-8 text-slate-400 max-w-2xl leading-8">
+                <p className="mt-6 sm:mt-8 text-slate-400 max-w-2xl leading-7 sm:leading-8 text-sm sm:text-base">
                   A production-ready MERN Stack banking application with
                   JWT authentication, HTTP-only cookies, secure money
                   transfers, transaction history, protected routes,
@@ -103,41 +103,41 @@ export default function Projects() {
 
               <div>
 
-                <div className="flex flex-wrap gap-3 mb-8">
+                <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
 
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm">
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
                     React
                   </span>
 
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm">
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
                     Node.js
                   </span>
 
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm">
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
                     Express
                   </span>
 
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm">
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
                     MongoDB
                   </span>
 
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm">
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
                     Tailwind CSS
                   </span>
 
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm">
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
                     JWT
                   </span>
 
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-3 sm:gap-4">
 
-                  <span className="px-6 py-3 rounded-xl bg-cyan-500 text-black font-semibold">
+                  <span className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-cyan-500 text-black font-semibold text-sm sm:text-base">
                     Live Demo
                   </span>
 
-                  <span className="px-6 py-3 rounded-xl border border-white/10">
+                  <span className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-white/10 text-sm sm:text-base">
                     View Project →
                   </span>
 
@@ -156,7 +156,7 @@ export default function Projects() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
-            <div className="relative p-8 flex flex-col justify-between min-h-[270px]">
+            <div className="relative p-6 sm:p-8 flex flex-col justify-between min-h-[240px] sm:min-h-[270px]">
 
               <div>
 
@@ -164,11 +164,11 @@ export default function Projects() {
                   Full Stack
                 </span>
 
-                <h3 className="text-3xl font-bold mt-5 mb-4">
+                <h3 className="text-2xl sm:text-3xl font-bold mt-4 sm:mt-5 mb-3 sm:mb-4">
                   E-Commerce Platform
                 </h3>
 
-                <p className="text-slate-400 leading-7">
+                <p className="text-slate-400 leading-6 sm:leading-7 text-sm sm:text-base">
                   Modern MERN e-commerce application featuring product
                   management, authentication, shopping cart, order
                   processing and responsive UI.
@@ -178,7 +178,7 @@ export default function Projects() {
 
               <div>
 
-                <div className="flex flex-wrap gap-2 mt-8">
+                <div className="flex flex-wrap gap-2 mt-6 sm:mt-8">
 
                   <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
                     React
@@ -198,16 +198,16 @@ export default function Projects() {
 
                 </div>
 
-                <div className="mt-8 flex items-center justify-between">
+                <div className="mt-6 sm:mt-8 flex items-center justify-between">
 
                   <span className="text-slate-500 text-sm">
                     2026
                   </span>
 
-                  <span className="flex items-center gap-2 text-cyan-400 font-medium group-hover:translate-x-2 transition">
+                  <span className="flex items-center gap-2 text-cyan-400 font-medium group-hover:translate-x-2 transition text-sm sm:text-base">
                     View Project
                     <svg
-                      className="w-4 h-4"
+                      className="w-4 h-4 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -236,7 +236,7 @@ export default function Projects() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
-            <div className="relative p-8 flex flex-col justify-between min-h-[270px]">
+            <div className="relative p-6 sm:p-8 flex flex-col justify-between min-h-[240px] sm:min-h-[270px]">
 
               <div>
 
@@ -244,11 +244,11 @@ export default function Projects() {
                   AI Project
                 </span>
 
-                <h3 className="text-3xl font-bold mt-5 mb-4">
+                <h3 className="text-2xl sm:text-3xl font-bold mt-4 sm:mt-5 mb-3 sm:mb-4">
                   AI Content Generator
                 </h3>
 
-                <p className="text-slate-400 leading-7">
+                <p className="text-slate-400 leading-6 sm:leading-7 text-sm sm:text-base">
                   AI-powered web application for generating blogs,
                   marketing copy and social media content using modern
                   language models with a responsive interface.
@@ -258,7 +258,7 @@ export default function Projects() {
 
               <div>
 
-                <div className="flex flex-wrap gap-2 mt-8">
+                <div className="flex flex-wrap gap-2 mt-6 sm:mt-8">
 
                   <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
                     React
@@ -278,16 +278,16 @@ export default function Projects() {
 
                 </div>
 
-                <div className="mt-8 flex items-center justify-between">
+                <div className="mt-6 sm:mt-8 flex items-center justify-between">
 
                   <span className="text-slate-500 text-sm">
                     2025
                   </span>
 
-                  <span className="flex items-center gap-2 text-cyan-400 font-medium group-hover:translate-x-2 transition">
+                  <span className="flex items-center gap-2 text-cyan-400 font-medium group-hover:translate-x-2 transition text-sm sm:text-base">
                     View Project
                     <svg
-                      className="w-4 h-4"
+                      className="w-4 h-4 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -315,25 +315,25 @@ export default function Projects() {
 
         {/* Bottom CTA */}
         <div
-          className="text-center mt-24 lite-fade-up"
+          className="text-center mt-16 sm:mt-20 md:mt-24 lite-fade-up"
           style={{ animationDelay: "0.5s" }}
         >
-          <p className="text-slate-500 text-sm mb-8">
+          <p className="text-slate-500 text-sm mb-6 sm:mb-8">
             Interested in seeing more of my work?
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
 
             <a
               href="https://github.com/Mluqman-main"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-white text-black font-semibold hover:scale-105 transition duration-300"
+              className="inline-flex items-center justify-center gap-3 px-8 py-3.5 sm:py-4 rounded-xl bg-white text-black font-semibold hover:scale-105 transition duration-300"
             >
               Explore GitHub
 
               <svg
-                className="w-5 h-5"
+                className="w-5 h-5 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -349,7 +349,7 @@ export default function Projects() {
 
             <a
               href="mailto:your@email.com"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl border border-white/10 hover:border-cyan-400 hover:text-cyan-400 transition duration-300"
+              className="inline-flex items-center justify-center gap-3 px-8 py-3.5 sm:py-4 rounded-xl border border-white/10 hover:border-cyan-400 hover:text-cyan-400 transition duration-300"
             >
               Contact Me
             </a>
